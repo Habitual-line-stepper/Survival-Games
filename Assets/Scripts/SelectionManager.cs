@@ -17,7 +17,7 @@ public class SelectionManager : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit,5)) // lookie here for distance 
         {
             var selectionTransform = hit.transform;
 
