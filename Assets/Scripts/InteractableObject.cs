@@ -11,6 +11,16 @@ public class InteractableObject : MonoBehaviour
     {
         return ItemName;
     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0)&& playerInRange)
+        {
+            Debug.Log("Item added");
+
+            Destroy(gameObject);
+        }
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {

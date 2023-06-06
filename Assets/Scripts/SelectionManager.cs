@@ -19,9 +19,10 @@ public class SelectionManager : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit,5)) // lookie here for distance 
         {
+            
             var selectionTransform = hit.transform;
 
-            if (selectionTransform.GetComponent<InteractableObject>()) //) && selectionTransform.GetComponent<InteractableObject>().playerInRange)
+            if (selectionTransform.GetComponent<InteractableObject>())//&& selectionTransform.GetComponent<InteractableObject>().playerInRange)
             {
                 interaction_text.text = selectionTransform.GetComponent<InteractableObject>().GetItemName();
                 interaction_info_UI.SetActive(true);
