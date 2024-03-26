@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+
+    
     public string ItemName;
     public bool playerInRange;
 
@@ -13,7 +15,7 @@ public class InteractableObject : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0)&& playerInRange)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && playerInRange && SelectionManager)
         {
             Debug.Log("Item added");
 
