@@ -15,7 +15,7 @@ public class InteractableObject : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && playerInRange && SelectionManager)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && playerInRange && SelectionManager.Instance.onTarget)
         {
             Debug.Log("Item added");
 
@@ -24,7 +24,7 @@ public class InteractableObject : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+   private void OnTriggerEnter(Collider other)
     {
 
         if (other.CompareTag("Player"))

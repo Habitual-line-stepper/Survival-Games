@@ -444,6 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449df1cdded9f624a951995aa8e10f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTarget: 0
   interaction_info_UI: {fileID: 1480259843}
 --- !u!1 &385656527 stripped
 GameObject:
@@ -947,8 +948,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cfd9b6f22a0d9c46a4fabfa8a69a569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemName: Rock
-  playerInRange: 1
+  ItemName: 
+  playerInRange: 0
 --- !u!65 &918742464
 BoxCollider:
   m_ObjectHideFlags: 0

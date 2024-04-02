@@ -9,18 +9,20 @@ public class SelectionManager : MonoBehaviour
     public static SelectionManager Instance { get; set; }
 
     public bool onTarget;
+
     public GameObject interaction_info_UI;
     Text interaction_text;
 
     private void Start()
     {
+        //onTarget = false;
         interaction_text = interaction_info_UI.GetComponent<Text>();
     }
     private void Awake()
     {
-        if (Instance!=null&& Instance!= this)
+        if (Instance !=null && Instance != this)
         {
-            Destroy(gameObject)
+            Destroy(gameObject);
         }
         else
         {
