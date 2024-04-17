@@ -39,10 +39,12 @@ public class SelectionManager : MonoBehaviour
             
             var selectionTransform = hit.transform;
 
-            if (selectionTransform.GetComponent<InteractableObject>()&& selectionTransform.GetComponent<InteractableObject>().playerInRange)// ignoring 1 collider to see if inrange
+            InteractableObject Iteractable = selectionTransform.GetComponent<InteractableObject>();
+
+            if (Iteractable && Iteractable.playerInRange)// ignoring 1 collider to see if inrange
             {
                 onTarget = true;
-                interaction_text.text = selectionTransform.GetComponent<InteractableObject>().GetItemName();
+                interaction_text.text = Iteractable.GetItemName();
                 interaction_info_UI.SetActive(true);
             }
             else
