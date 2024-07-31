@@ -20,7 +20,7 @@ public class SelectionManager : MonoBehaviour
     }
     private void Awake()
     {
-        if (Instance !=null && Instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
         }
@@ -30,13 +30,13 @@ public class SelectionManager : MonoBehaviour
         }
 
     }
-     void Update()
+    void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit,5)) // lookie here for distance 
+        if (Physics.Raycast(ray, out hit, 5)) // lookie here for distance 
         {
-            
+
             var selectionTransform = hit.transform;
 
             InteractableObject Iteractable = selectionTransform.GetComponent<InteractableObject>();
