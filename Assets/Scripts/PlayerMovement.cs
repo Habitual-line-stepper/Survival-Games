@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         else //this is base speed
         {
             speed = 15f;
+            jumpHeight = 3f;
         }
 
         float x = Input.GetAxis("Horizontal");
